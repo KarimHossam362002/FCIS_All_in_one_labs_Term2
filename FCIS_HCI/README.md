@@ -5,7 +5,7 @@ This repository contains a project for **processing and classifying horizontal E
 ---
 
 ## Project Structure
-
+```bash
 Task1_EOG/
 │
 ├─ HorizontalSignals.xlsx # Original horizontal EOG signals (20 signals × 250 samples)
@@ -15,7 +15,7 @@ Task1_EOG/
 ├─ TASK1_Classification.py # Classifies test signal using Euclidean distance
 ├─ FeatureMatrix.xlsx # Generated feature matrix from training signals
 └─ README.md # Project documentation
-
+```
 
 
 ---
