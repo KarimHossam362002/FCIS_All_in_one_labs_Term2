@@ -12,7 +12,7 @@ Task1_EOG/
 ├─ TestSignal.txt # Test signal for classification
 ├─ TASK1_PreProcessing.py # Preprocessing module (bandpass filter, baseline removal)
 ├─ TASK1_FeatureExtraction.py # Extracts statistical, morphological, and AR features
-├─ TASK1_Classification.py # Classifies test signal using Euclidean distance
+├─ TASK1_Euclidean_distance.py # Classifies test signal using Euclidean distance
 ├─ FeatureMatrix.xlsx # Generated feature matrix from training signals
 └─ README.md # Project documentation
 ```
