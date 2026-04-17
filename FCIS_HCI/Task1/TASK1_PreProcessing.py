@@ -30,8 +30,8 @@ def preprocess_signal(signal, fs=176):
 # Parameters
 # -----------------------------
 fs = 176
-low_cut = 0.1
-high_cut = 10
+low_cut = 0.5
+high_cut = 20
 order = 4
 
 # -----------------------------
