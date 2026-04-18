@@ -4,7 +4,7 @@ import scipy.fftpack as fft
 import pywt
 import neurokit2 as nk
 import matplotlib.pyplot as plt
-
+import statsmodels.api as sm
 from scipy.signal import butter, filtfilt
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics.pairwise import euclidean_distances
@@ -103,12 +103,12 @@ def dwt_features(ecg):
 # AC + DCT
 # =====================================================
 def ac_dct_features(ecg):
-    ac = np.correlate(ecg, ecg, mode='full')
-    ac = ac[len(ac)//2:]
+    lags = min(1000, len(ecg) - 1)
+    ac = sm.tsa.acf(ecg, nlags=lags)
+    acc_seg = ac[0:100]
+    dct_feat = fft.dct(acc_seg, type=2)
 
-    dct = fft.dct(ac, norm='ortho')
-
-    return dct[:20]
+    return dct_feat
 
 # =====================================================
 # COMBINE ALL FEATURES
